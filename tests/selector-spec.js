@@ -143,6 +143,11 @@ test("Element.matches and Element.closest", function (assert) {
 	assert.equal(s2.matches("div + span"), false)
 	assert.equal(s2.matches("div + div"), false)
 
+	assert.equal(el1.matches("div ~ div"), false)
+	assert.equal(s1.matches("div ~ span"), true)
+	assert.equal(s2.matches("div ~ span"), true)
+	assert.equal(s2.matches("div ~ div"), false)
+
 	assert.equal(el1.matches("body div#1"), true)
 	assert.equal(el1.matches("html div#1"), true)
 
