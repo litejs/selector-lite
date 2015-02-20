@@ -1,3 +1,7 @@
+[1]: https://secure.travis-ci.org/litejs/selector-lite.png
+[2]: https://travis-ci.org/litejs/selector-lite
+[3]: https://coveralls.io/repos/litejs/selector-lite/badge.png
+[4]: https://coveralls.io/r/litejs/selector-lite
 [npm package]: https://npmjs.org/package/selector-lite
 [GitHub repo]: https://github.com/litejs/selector-lite
 
@@ -7,7 +11,7 @@
     @stability  2 - Unstable
 
 
-Selector lite
+Selector lite &ndash; [![Build][1]][2] [![Coverage][3]][4]
 =============
 
 A small pure-JavaScript CSS selector engine.
@@ -29,7 +33,7 @@ function getElementById(id) {
 function getElementsByTagName(tag) {
     return selector.find(this, tag)
 }
-function getElementsByClassName: (sel) {
+function getElementsByClassName(sel) {
     return selector.find(this, "." + sel.replace(/\s+/g, "."))
 }
 function querySelector(sel) {
@@ -70,11 +74,6 @@ selector.selectorMap.input = "_.tagName=='INPUT'"
 // Add `:val()` selector
 selector.selectorMap.val = "_.value==v"
 ```
-
-### Note
-
--  Working tests are currently in `dom-lite` repo
-   as moving them is pain. Will do later.
 
 Coding Style Guidelines
 -----------------------

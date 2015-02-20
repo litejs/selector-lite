@@ -1,6 +1,6 @@
 var undef
 , test = require("tape")
-, DOM = require("../")
+, DOM = require("./dom-lite.js")
 , document = DOM.document
 
 

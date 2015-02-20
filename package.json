@@ -16,14 +16,18 @@
   "main": "selector.js",
   "readmeFilename": "README.md",
   "scripts": {
-    "build": "node node_modules/buildman/index.js --all"
+    "build": "node node_modules/buildman/index.js --all",
+    "travis-test": "istanbul cover ./tests/index.js && (coveralls < coverage/lcov.info || exit 0)",
+    "cover-climate": "istanbul cover ./tests/index.js && (codeclimate < coverage/lcov.info || exit 0)",
+    "test": "faucet; jshint --verbose selector.js"
   },
   "repository": "git://github.com/litejs/selector-lite.git",
   "bugs": {
     "url": "https://github.com/litejs/selector-lite/issues"
   },
   "devDependencies": {
-    "buildman": "*"
+    "buildman": "*",
+    "tape": "2.12.x"
   },
   "buildman": {
     "dist/selector-min.js": "selector.js"
