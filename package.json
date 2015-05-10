@@ -1,6 +1,6 @@
 {
   "name": "selector-lite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "stability": 2,
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
@@ -30,7 +30,10 @@
     "tape": "2.12.x"
   },
   "buildman": {
-    "dist/selector-min.js": "selector.js"
+    "dist/selector-min.js": {
+      "banner": "/*! litejs.com/MIT-LICENSE.txt */",
+      "input": "selector.js"
+    }
   },
   "jshintConfig": {
     "asi": true,

@@ -6,8 +6,8 @@
 [GitHub repo]: https://github.com/litejs/selector-lite
 
 
-    @version    0.1.0
-    @date       2015-02-19
+    @version    0.1.1
+    @date       2015-05-10
     @stability  2 - Unstable
 
 
