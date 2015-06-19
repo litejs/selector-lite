@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "buildman": "*",
-    "tape": "4.0.x"
+    "testman": "0.3.x"
   },
   "buildman": {
     "dist/selector-min.js": {
