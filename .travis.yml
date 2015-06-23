@@ -6,5 +6,5 @@ before_script:
 script:
   - istanbul cover ./tests/index.js
 after_success:
-  - coveralls
+  - coveralls < coverage/lcov.info
 
