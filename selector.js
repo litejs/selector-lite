@@ -72,7 +72,7 @@
 					return ""
 				})
 
-				if (tag && tag != "*") rules[0] += "&&_.tagName=='" + tag.toUpperCase() + "'"
+				if (tag && tag != "*") rules[0] += "&&_.tagName.toUpperCase()=='" + tag.toUpperCase() + "'"
 				if (parentSel) rules.push("(v='" + parentSel + "')", selectorMap[relation + relation])
 				return rules.join("&&")
 			}).join("||") + "}"
