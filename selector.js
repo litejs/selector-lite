@@ -93,7 +93,7 @@
 	function find(node, sel, first) {
 		return walk("firstChild", node.firstChild, sel, first, function(el) {
 			var next = el.nextSibling
-			while (!next && ((el = el.parentNode) !== node)) next = el.nextSibling
+			while (!next && ((el = el.parentNode) !== node) && el) next = el.nextSibling
 			return next
 		})
 	}
