@@ -19,9 +19,9 @@
     "cover-climate": "istanbul cover ./tests/index.js && (codeclimate < coverage/lcov.info || exit 0)",
     "test": "node tests/index.js; jshint --verbose selector.js"
   },
-  "repository": "git://github.com/litejs/selector-lite.git",
+  "repository": "git://github.com/modulesio/selector-lite.git",
   "bugs": {
-    "url": "https://github.com/litejs/selector-lite/issues"
+    "url": "https://github.com/modulesio/selector-lite/issues"
   },
   "devDependencies": {
     "testman": "0.3.x"
