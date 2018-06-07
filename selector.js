@@ -1,8 +1,8 @@
-var selectorRe = /([.#:[])([-\w]+)(?:\((.+?)\)|([~^$*|]?)=(("|')(?:\\?.)*?\6|[-\w]+))?]?/g
-, selectorLastRe = /([~\s>+]*)(?:("|')(?:\\?.)*?\2|\(.+?\)|[^\s+>])+$/
-, selectorSplitRe = /\s*,\s*(?=(?:[^'"()]|"(?:\\?.)*?"|'(?:\\?.)*?'|\(.+?\))+$)/
-, selectorCache = {}
-, selectorMap = {
+const selectorRe = /([.#:[])([-\w]+)(?:\((.+?)\)|([~^$*|]?)=(("|')(?:\\?.)*?\6|[-\w]+))?]?/g;
+const selectorLastRe = /([~\s>+]*)(?:("|')(?:\\?.)*?\2|\(.+?\)|[^\s+>])+$/;
+const selectorSplitRe = /\s*,\s*(?=(?:[^'"()]|"(?:\\?.)*?"|'(?:\\?.)*?'|\(.+?\))+$)/;
+const selectorCache = {};
+const selectorMap = {
   "any": "m(_,v)",
   "empty": "!_.lastChild",
   "enabled": "!m(_,':disabled')",
@@ -29,9 +29,8 @@ var selectorRe = /([.#:[])([-\w]+)(?:\((.+?)\)|([~^$*|]?)=(("|')(?:\\?.)*?\6|[-\
   "++": "m(_.previousSibling,v)",
   "~~": "p(_,v)",
   "": "c(_.parentNode,v)"
-}
-
-selectorMap["nth-last-child"] = selectorMap["nth-child"].replace("1+", "v.length-")
+};
+selectorMap["nth-last-child"] = selectorMap["nth-child"].replace("1+", "v.length-");
 
 function selectorFn(str) {
   // jshint evil:true
