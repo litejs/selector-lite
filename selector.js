@@ -116,13 +116,10 @@
 		return walk("previousSibling", el.previousSibling, sel, 1)
 	}
 
-
-	exports.find = find
-	exports.fn = selectorFn
-	exports.matches = matches
-	exports.closest = closest
-	exports.next = next
-	exports.prev = prev
-	exports.selectorMap = selectorMap
+	exports.find = find;
+	exports.matches = matches;
+	exports.closest = closest;
+	exports.next = next;
+	exports.prev = prev;
 }(this)
 
