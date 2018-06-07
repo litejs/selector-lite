@@ -20,23 +20,23 @@
 		"any": "m(_,v)",
 		"empty": "!_.lastChild",
 		"enabled": "!m(_,':disabled')",
-		"first-child": "(a=_.parentNode)&&a.firstChild==_",
+		"first-child": "(a=_.parentNode)&&a.firstChild===_",
 		"first-of-type": "!p(_,_.tagName)",
 		"lang": "m(c(_,'[lang]'),'[lang|='+v+']')",
-		"last-child": "(a=_.parentNode)&&a.lastChild==_",
+		"last-child": "(a=_.parentNode)&&a.lastChild===_",
 		"last-of-type": "!n(_,_.tagName)",
 		"link": "m(_,'a[href]')",
 		"not": "!m(_,v)",
-		"nth-child": "(a=2,'odd'==v?b=1:'even'==v?b=0:a=1 in(v=v.split('n'))?(b=v[1],v[0]):(b=v[0],0),v=_.parentNode.childNodes,v=1+v.indexOf(_),0==a?v==b:('-'==a||0==(v-b)%a)&&(0<a||v<=b))",
-		"only-child": "(a=_.parentNode)&&a.firstChild==a.lastChild",
+		"nth-child": "(a=2,'odd'===v?b=1:'even'===v?b=0:a=1 in(v=v.split('n'))?(b=v[1],v[0]):(b=v[0],0),v=_.parentNode.childNodes,v=1+v.indexOf(_),0===a?v===b:('-'===a||0===(v-b)%a)&&(0<a||v<=b))",
+		"only-child": "(a=_.parentNode)&&a.firstChild===a.lastChild",
 		"only-of-type": "!p(_,_.tagName)&&!n(_,_.tagName)",
 		"optional": "!m(_,':required')",
 		"root": "(a=_.parentNode)&&!a.tagName",
 		".": "~_.className.split(/\\s+/).indexOf(a)",
-		"#": "_.id==a",
+		"#": "_.id===a",
 		"^": "!a.indexOf(v)",
-		"|": "a.split('-')[0]==v",
-		"$": "a.slice(-v.length)==v",
+		"|": "a.split('-')[0]===v",
+		"$": "a.slice(-v.length)===v",
 		"~": "~a.split(/\\s+/).indexOf(v)",
 		"*": "~a.indexOf(v)",
 		">>": "m(_.parentNode,v)",
@@ -65,15 +65,17 @@
 						(subSel || (quotation ? val.slice(1, -1) : val) || "").replace(/'/g, "\\'") +
 						"'),(a='" + key + "'),1)"
 						,
-						selectorMap[op == ":" ? key : op] ||
+						selectorMap[op === ":" ? key : op] ||
 						"(a=_.getAttribute(a))" +
-						(fn ? "&&" + selectorMap[fn] : val ? "==v" : "")
+						(fn ? "&&" + selectorMap[fn] : val ? "===v" : "")
 					)
 					return ""
 				})
 
-				if (tag && tag != "*") rules[0] += "&&_.tagName.toUpperCase()=='" + tag.toUpperCase() + "'"
-				if (parentSel) rules.push("(v='" + parentSel + "')", selectorMap[relation + relation])
+				if (tag && tag !== "*") rules[0] += "&&_.tagName.toUpperCase()==='" + tag.toUpperCase() + "'"
+				if (parentSel) {
+          rules.push("(v='" + parentSel + "')", selectorMap[relation + relation]);
+        }
 				return rules.join("&&")
 			}).join("||") + "}"
 		)(matches, closest, next, prev))
