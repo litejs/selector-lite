@@ -101,7 +101,7 @@
 	}
 
 	function matches(el, sel) {
-		return !!selectorFn(sel)(el)
+		return Boolean(selectorFn(sel)(el));
 	}
 
 	function closest(el, sel) {
