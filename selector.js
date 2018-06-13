@@ -52,7 +52,7 @@ function selectorFn(str) {
           ,
           selectorMap[op === ":" ? key : op] ||
           "(a=_.getAttribute(a))" +
-          (fn ? "&&" + selectorMap[fn] : val ? "===v" : "")
+          (fn ? "&&" + selectorMap[fn] : val ? "===v" : "!==null")
         )
         return ""
       })
