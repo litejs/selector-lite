@@ -51,7 +51,7 @@ function selectorFn(str) {
           "'),(a='" + key + "'),1)"
           ,
           selectorMap[op === ":" ? key : op] ||
-          "(a=_.getAttribute(a))" +
+          "(a=_.ownerDocument.defaultView.Element.prototype.getAttribute.call(_,a))" +
           (fn ? "&&" + selectorMap[fn] : val ? "===v" : "!==null")
         )
         return ""
