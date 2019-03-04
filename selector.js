@@ -57,7 +57,7 @@ function selectorFn(str) {
         return ""
       })
 
-      if (tag && tag !== "*") rules[0] += "&&_.tagName.toUpperCase()==='" + tag.toUpperCase() + "'"
+      if (tag && tag !== "*") rules[0] += "&&_.tagName&&_.tagName.toUpperCase()==='" + tag.toUpperCase() + "'"
       if (parentSel) {
         rules.push("(v='" + parentSel + "')", selectorMap[relation + relation]);
       }
