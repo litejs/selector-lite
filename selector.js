@@ -18,6 +18,7 @@ const selectorMap = {
   "only-of-type": "!p(_,_.tagName)&&!n(_,_.tagName)",
   "optional": "!m(_,':required')",
   "root": "(a=_.parentNode)&&!a.tagName",
+  "scope": "true",
   ".": "~_.className.split(/\\s+/).indexOf(a)",
   "#": "_.id===a",
   "^": "!a.indexOf(v)",
