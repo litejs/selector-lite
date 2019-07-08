@@ -47,9 +47,9 @@ function selectorFn(str) {
       })
       , tag = sel.slice(from).replace(selectorRe, function(_, op, key, subSel, fn, val, quotation) {
         rules.push(
-          "((v='" +
+          "((v=`" +
           (subSel || (quotation ? val.slice(1, -1) : val) || "").replace(/'/g, "\\'") +
-          "'),(a='" + key + "'),1)"
+          "`),(a=`" + key + "`),1)"
           ,
           selectorMap[op === ":" ? key : op] ||
           "(a=_.ownerDocument.defaultView.Element.prototype.getAttribute.call(_,a))" +
@@ -60,7 +60,7 @@ function selectorFn(str) {
 
       if (tag && tag !== "*") rules[0] += "&&_.tagName&&_.tagName.toUpperCase()==='" + tag.toUpperCase() + "'"
       if (parentSel) {
-        rules.push("(v='" + parentSel + "')", selectorMap[relation + relation]);
+        rules.push("(v=`" + parentSel + "`)", selectorMap[relation + relation]);
       }
       return rules.join("&&")
     }).join("||") + "}"
