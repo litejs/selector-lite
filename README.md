@@ -1,17 +1,14 @@
-[1]: https://secure.travis-ci.org/litejs/selector-lite.png
+[1]: https://badgen.net/travis/litejs/selector-lite
 [2]: https://travis-ci.org/litejs/selector-lite
-[3]: https://coveralls.io/repos/litejs/selector-lite/badge.png
+[3]: https://badgen.net/coveralls/c/github/litejs/selector-lite
 [4]: https://coveralls.io/r/litejs/selector-lite
-[npm package]: https://npmjs.org/package/selector-lite
-[GitHub repo]: https://github.com/litejs/selector-lite
+[5]: https://badgen.net/packagephobia/install/selector-lite@19.11.0
+[6]: https://packagephobia.now.sh/result?p=selector-lite
+[7]: https://badgen.net/badge/icon/Buy%20Me%20A%20Tea/orange?icon=kofi&label
+[8]: https://www.buymeacoffee.com/lauriro
 
 
-    @version    0.1.1
-    @date       2015-05-10
-    @stability  2 - Unstable
-
-
-Selector lite &ndash; [![Build][1]][2] [![Coverage][3]][4]
+Selector lite &ndash; [![Build][1]][2] [![Coverage][3]][4] [![Size][5]][6] [![Buy Me A Tea][7]][8]
 =============
 
 A small pure-JavaScript CSS selector engine.
@@ -89,19 +86,20 @@ Coding Style Guidelines
  - Fix tests before push or pull request
 
 
-External links
---------------
+## External links
 
- - [GitHub repo][]
- - [npm package][]
- - [DOM spec](https://dom.spec.whatwg.org/)
- - [Selectors Level 3](http://www.w3.org/TR/selectors/)
+[GitHub repo](https://github.com/litejs/selector-lite) |
+[npm package](https://npmjs.org/package/selector-lite) |
+[DOM spec](https://dom.spec.whatwg.org/) |
+[Selectors Level 3](http://www.w3.org/TR/selectors/) |
+[Travis CI](https://travis-ci.org/litejs/selector-lite) |
+[Coveralls coverage](https://coveralls.io/github/litejs/selector-lite) |
+[Buy Me A Tea][8]
 
 
+## Licence
 
-### Licence
-
-Copyright (c) 2015 Lauri Rooden &lt;lauri@rooden.ee&gt;  
+Copyright (c) 2015-2019 Lauri Rooden &lt;lauri@rooden.ee&gt;  
 [The MIT License](http://lauri.rooden.ee/mit-license.txt)
 
 

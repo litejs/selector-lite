@@ -1,7 +1,6 @@
 {
   "name": "selector-lite",
   "version": "0.1.1",
-  "stability": 2,
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
   "description": "A small pure-JavaScript CSS selector engine",
@@ -15,16 +14,12 @@
   ],
   "main": "selector.js",
   "readmeFilename": "README.md",
-  "scripts": {
-    "cover-climate": "istanbul cover ./tests/index.js && (codeclimate < coverage/lcov.info || exit 0)",
-    "test": "node tests/index.js; jshint --verbose selector.js"
-  },
+  "files": [
+    "index.js"
+  ],
   "repository": "git://github.com/litejs/selector-lite.git",
   "bugs": {
     "url": "https://github.com/litejs/selector-lite/issues"
-  },
-  "devDependencies": {
-    "testman": "0.3.x"
   },
   "jshintConfig": {
     "asi": true,
@@ -32,5 +27,10 @@
     "maxdepth": 6,
     "quotmark": "double",
     "-W030": false
+  },
+  "litejs": {
+    "build": [
+      "-r selector.js"
+    ]
   }
 }
