@@ -1,12 +1,14 @@
 var undef
 , test = require("testman").test
 , DOM = require("./dom-lite.js")
+, selector = require("../")
 , document = DOM.document
 
 
-function append_el(id, parent, tag) {
+function append_el(id, parent, tag, content) {
 	var el = document.createElement(tag || "div")
 	el.id = id
+	if (content) el.textContent = content
 	parent.appendChild(el)
 	return el
 }
@@ -405,8 +407,8 @@ test(":nth-last-child selector", function (assert) {
 })
 
 test(":lang() selector", function (assert) {
-	document = new DOM.Document()
-	var el = document.body
+	var document = new DOM.Document()
+	, el = document.body
 	, p1   = append_el("p1", el, "p")
 	, p2   = append_el("p2", el, "p")
 	, p3   = append_el("p3", p1, "p")
@@ -420,6 +422,29 @@ test(":lang() selector", function (assert) {
 
 	assert.deepEqual(el.querySelectorAll(":lang(fr)")
 	, [p2, p4])
+
+	assert.end()
+})
+
+test(":contains() selector", function (assert) {
+	var document = new DOM.Document()
+	, el = document.body
+	, p1   = append_el(1, el, "p", "ab cd")
+	, p2   = append_el(2, el, "p", "ab")
+	, p3   = append_el(3, el, "a", "cd")
+	, p4   = append_el(4, el, "a", "ef")
+
+	assert.deepEqual(el.querySelectorAll(":contains(ab)")
+	, [p1, p2])
+
+	assert.deepEqual(el.querySelectorAll(":contains(cd)")
+	, [p1, p3])
+
+	assert.deepEqual(el.querySelectorAll("a:contains(cd)")
+	, [p3])
+
+	assert.deepEqual(el.querySelectorAll(":contains(g)")
+	, [])
 
 	assert.end()
 })
