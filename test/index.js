@@ -125,6 +125,10 @@ describe("selector-lite", function() {
 		in1.disabled = true
 		in2.required = true
 
+		assert.throws(function() { el1.matches({}) })
+		assert.throws(function() { el1.matches([]) })
+
+		assert.equal(el1.matches(null), false)
 		assert.equal(el1.matches("div"), true)
 		assert.equal(el1.matches("div, span"), true)
 		assert.equal(el1.matches("span"), false)
