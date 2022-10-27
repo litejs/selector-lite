@@ -12,6 +12,7 @@
     "closest",
     "litejs"
   ],
+  "main": "index.js",
   "files": [],
   "repository": "github:litejs/selector-lite",
   "bugs": "https://github.com/litejs/selector-lite/issues",
