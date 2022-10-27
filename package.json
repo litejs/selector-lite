@@ -1,6 +1,6 @@
 {
   "name": "selector-lite",
-  "version": "20.2.0",
+  "version": "22.10.0",
   "description": "A small pure-JavaScript CSS selector engine",
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
@@ -23,6 +23,7 @@
     "c8": "7.12.0"
   },
   "litejs": {
+    "build": false,
     "lint": "jshint *.js"
   },
   "jshintConfig": {
