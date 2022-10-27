@@ -12,10 +12,7 @@
     "closest",
     "litejs"
   ],
-  "main": "selector.js",
-  "files": [
-    "selector.js"
-  ],
+  "files": [],
   "repository": "git://github.com/litejs/selector-lite.git",
   "bugs": "https://github.com/litejs/selector-lite/issues",
   "litejs": {
