@@ -151,6 +151,8 @@ describe("selector-lite", function() {
 
 		assert.equal(el1.matches("div ~ div"), false)
 		assert.equal(s1.matches("div ~ span"), true)
+		assert.equal(s1.matches("div~ span"), true)
+		assert.equal(s1.matches("div ~span"), true)
 		assert.equal(s2.matches("div ~ span"), true)
 		assert.equal(s2.matches("div ~ div"), false)
 
@@ -446,6 +448,12 @@ describe("selector-lite", function() {
 
 		assert.equal(el.querySelectorAll("a:contains(cd)")
 		, [p3])
+
+		assert.equal(el.querySelectorAll("a:contains(cd)~a")
+		, [p4])
+
+		assert.equal(el.querySelectorAll("a:contains(cd) ~ a")
+		, [p4])
 
 		assert.equal(el.querySelectorAll(":contains(g)")
 		, [])
