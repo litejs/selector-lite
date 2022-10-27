@@ -1,6 +1,6 @@
 {
   "name": "selector-lite",
-  "version": "22.10.0",
+  "version": "22.10.1",
   "description": "A small pure-JavaScript CSS selector engine",
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
