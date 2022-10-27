@@ -78,11 +78,8 @@ Follow [Coding Style Guidelines](https://github.com/litejs/litejs/wiki/Style-Gui
 Run tests
 
 ```
-npm install -g @litejs/cli jshint nyc
 npm install
-lj test
-lj lint
-nyc lj test
+npm test
 ```
 
 ## External links
