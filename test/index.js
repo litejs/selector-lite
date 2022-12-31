@@ -268,6 +268,7 @@ describe("selector-lite", function() {
 		assert.equal(el1.matches("div:not(:only-of-type)"), false)
 
 		assert.equal(el1.matches("div:is(:first-child, :last-child)"), true)
+		assert.equal(el1.matches("div:is(:not(:last-child))"), true)
 		assert.equal(el1.matches("div:last-child"), false)
 		assert.equal(el1.matches("div:not(:last-child)"), true)
 		assert.equal(el1.matches("div:is(:first-child, :last-child)"), true)
