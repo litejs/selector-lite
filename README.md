@@ -9,6 +9,8 @@
 Selector lite &ndash; [![Coverage][3]][4] [![Size][5]][6] [![Buy Me A Tea][7]][8]
 =============
 
+## DEPRECATED! It is merged into dom-lite. Use `require('dom-lite/selector')`
+
 A small pure-JavaScript CSS selector engine.
 
  - no library dependencies
