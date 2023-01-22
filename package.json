@@ -1,6 +1,6 @@
 {
   "name": "selector-lite",
-  "version": "22.10.1",
+  "version": "23.1.0",
   "description": "DEPRECATED! It is merged into dom-lite! A small pure-JavaScript CSS selector engine",
   "license": "MIT",
   "author": "Lauri Rooden <lauri@rooden.ee>",
@@ -18,5 +18,6 @@
   "bugs": "https://github.com/litejs/selector-lite/issues",
   "dependencies": {
     "dom-lite": "23.1.0"
-  }
+  },
+  "litejs": {}
 }
